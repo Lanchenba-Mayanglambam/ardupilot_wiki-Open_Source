@@ -116,7 +116,7 @@ Time
    </tr>
    <tr>
    <td>ap/time</td>
-   <td>builtin_interface/msg/Time</td> 
+   <td>builtin_interfaces/msg/Time</td> 
    <td>This sends time from AP's real time clock.</td>
    <td>100 Hz</td>
    </tr>
@@ -125,6 +125,12 @@ Time
    <td>rosgraph_msgs/msg/Clock</td> 
    <td>This sends time from AP's real time clock in a format suitable for aligning ROS time of a companion computer.</td>
    <td>100 Hz</td>
+   </tr>
+   <tr>
+   <td>/clock</td>
+   <td>rosgraph_msgs/msg/Clock</td> 
+   <td>In SITL, ArduPilot subscribes to this simulation clock topic to synchronize AP_DDS topic timestamps with the simulation environment (such as Gazebo). If unavailable, timestamps fall back to RTC or time since boot.</td>
+   <td>Subscription (SITL only)</td>
    </tr>
    </tbody>
    </table>
